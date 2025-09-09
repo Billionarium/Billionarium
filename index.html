@@ -186,6 +186,19 @@ window.addEventListener("load", () => {
   noteOut.textContent = "Your note will appear here…";
   counter.textContent = "0 / 600";
 });
+  // Reset pól przy załadowaniu strony
+window.addEventListener("load", () => {
+  // Reset notatki
+  noteInput.value = "";
+  noteOut.textContent = "Your note will appear here…";
+  counter.textContent = "0 / 600";
+
+  // Reset custom title
+  customTitle.value = "";
+  customTitle.style.display = "none";
+  titleSelect.value = "Gratitude Note"; // możesz ustawić domyślny typ dokumentu
+  titlePreview.textContent = titleSelect.value;
+});
 
 </script>
 </body>
