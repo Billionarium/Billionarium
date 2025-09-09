@@ -180,6 +180,13 @@
     pdf.addImage(imgData, 'PNG', 0,0, pageWidth, pageHeight);
     pdf.save('dyplom.pdf');
   });
+  // Reset pola notatki przy załadowaniu strony
+window.addEventListener("load", () => {
+  noteInput.value = "";
+  noteOut.textContent = "Your note will appear here…";
+  counter.textContent = "0 / 600";
+});
+
 </script>
 </body>
 </html>
