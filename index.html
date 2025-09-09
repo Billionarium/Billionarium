@@ -31,6 +31,7 @@
     .muted {color:#cbd5e1; font-size:12px;}
 
 /* Mobile-friendly adjustments */
+
 @media (max-width: 768px) {
   /* Układ strony: jedna kolumna zamiast dwóch */
   .app {
@@ -38,12 +39,13 @@
     padding: 12px;
   }
 
-  /* Podgląd certyfikatu – zachowanie proporcji A4 dla PDF */
+  /* Podgląd certyfikatu – responsywny, skalowany */
   .preview {
     width: 100%;
     max-width: 100%;
-    height: 1052px; /* stała wysokość A4 w px dla PDF */
-    min-height: 1052px; /* zabezpieczenie przed ucinkiem PDF */
+    transform: scale(0.48); /* dopasowanie do szerokości ekranu */
+    transform-origin: top left;
+    height: auto; /* wysokość nie ma znaczenia przy podglądzie */
   }
 
   .art img {
@@ -90,6 +92,7 @@
     font-size: 10px;
   }
 }
+
 
   </style>
   
