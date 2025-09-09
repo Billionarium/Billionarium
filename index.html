@@ -30,6 +30,66 @@
     .button {background:#3b82f6; color:white; border:0; padding:12px 14px; border-radius:12px; font-weight:700; cursor:pointer;}
     .muted {color:#cbd5e1; font-size:12px;}
   </style>
+  /* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+  /* Układ strony: jedna kolumna zamiast dwóch */
+  .app {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  /* Podgląd certyfikatu */
+  .preview {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1.4142; /* zachowanie proporcji A4 */
+  }
+
+  .art img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Sidebar i pola formularzy */
+  textarea, input[type=text] {
+    font-size: 16px;
+  }
+
+  /* Przycisk i układ wierszy */
+  .row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  /* Marginesy w kartach */
+  .card {
+    padding: 12px;
+  }
+
+  .note {
+    padding: 16px 20px 20px;
+    margin: 0 0 20px;
+    font-size: 15px;
+  }
+
+  .header {
+    padding: 24px 20px 8px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .watermark {
+    font-size: 10px;
+  }
+}
+
 </head>
 <body>
 <div class="app">
