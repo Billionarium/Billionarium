@@ -187,7 +187,9 @@
     const pageWidth = pdf.internal.pageSize.getWidth();
     const pageHeight = pdf.internal.pageSize.getHeight();
     pdf.addImage(imgData, 'PNG', 0,0, pageWidth, pageHeight);
-    pdf.save('dyplom.pdf');
+    const fileName = (titlePreview.textContent || "document").replace(/\s+/g, "_");
+pdf.save(fileName + ".pdf");
+;
   });
   // Reset pola notatki przy załadowaniu strony
 window.addEventListener("load", () => {
