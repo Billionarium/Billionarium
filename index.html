@@ -187,6 +187,12 @@
     const pageWidth = pdf.internal.pageSize.getWidth();
     const pageHeight = pdf.internal.pageSize.getHeight();
     pdf.addImage(imgData, 'PNG', 0,0, pageWidth, pageHeight);
+    // Dodanie klikalnego linku do Millionarium
+pdf.setFontSize(10); 
+pdf.textWithLink("Millionarium™", 105, 290, {
+  url: "https://millionarium.com"
+});
+
     pdf.save('dyplom.pdf');
   });
   // Reset pola notatki przy załadowaniu strony
